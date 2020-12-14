@@ -1,8 +1,11 @@
+
 const express = require('express')
+const cors = require('cors');
 const Twit = require('twit')
 const app = express()
 const port = process.env.PORT || 8000
 
+app.use(cors());
 
 const T = new Twit({
   consumer_key: 'M9sH0OSwidJ3tK2c2Y5gpQa8U',
