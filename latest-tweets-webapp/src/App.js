@@ -13,20 +13,19 @@ function App() {
 class TweetMaker extends React.Component {
   constructor(props) {
     super(props);
-
     this.state = { data: [] }
   }
 
-  fetchTweet(username) {
-    fetch('http://localhost:8000/user/' + username)
+  fetchTweet(handle) {
+    fetch('http://localhost:8000/user/' + handle)
       .then(res => res.json())
       .then(res => this.setState({ data: res.data }))
   }
 
   render() {
     return (
-      <div>
-        <div className="App">
+      <div >
+        <div className="App"   >
           <header className="App-header">
             <p>
               Please input a valid Twitter handle:
@@ -40,7 +39,7 @@ class TweetMaker extends React.Component {
           </header>
         </div>
 
-        <div>
+        <div >
           {this.state.data.map((tweet, index) => {
             return Tweet(tweet, index)
           })}
