@@ -50,11 +50,19 @@ class TweetMaker extends React.Component {
   }
 }
 
+var tweetStyle = {
+  padding: "20px",
+  margin: "20px"
+};
+
+
 const Tweet = (tweet, index) => {
   return (
-    <div key={index} style={{ borderStyle: 'solid', borderColor: 'black' }}>
-      <h2>Latest Tweet {index + 1}</h2>
-      <p>{tweet.text}</p>
+    <div key={index} style={{ borderStyle: 'solid', borderColor: '#2AD3F5' }}>
+      <h2>Tweet {index + 1}</h2>
+      <p style={tweetStyle}>
+        {tweet.text}
+      </p>
     </div>
   )
 }
