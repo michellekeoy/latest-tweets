@@ -1,9 +1,6 @@
 # latest-tweets
-install cors and express
 
-```npm install cors```
-
-```npm install express```
+```npm install```
 
 run server.js and npm start
 
