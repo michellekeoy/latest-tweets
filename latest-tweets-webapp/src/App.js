@@ -24,27 +24,27 @@ class TweetMaker extends React.Component {
 
   render() {
     return (
-      <div >
-        <div className="App"   >
-          <header className="App-header">
+      <div>
+        <div>
+          <header>
             <p>
               Please input a valid Twitter handle:
               </p>
             <form>
               <input type="text" id="handle" style={{ marginBottom: "20px" }} />
             </form>
-            <button onClick={() => { this.fetchTweet(document.getElementById('handle').value) }}>
+            <button onClick={() => { this.fetchTweet(document.getElementById('handle').value) }} style={{ marginBottom: "20px" }} >
               Search User
               </button>
           </header>
         </div>
 
-        <div >
+        <div>
           {this.state.data.map((tweet, index) => {
             return Tweet(tweet, index)
           })}
         </div>
-      </div>
+      </div >
 
     )
   }
